@@ -1,3 +1,7 @@
+Fill out this comprehensive cheatsheet template for the [SPECIFIC PATTERN NAME] pattern. I'm studying for leetcode 
+interviews and my goal is to crack those interviews. Please reflect on it and think step by step.
+
+
 # [PATTERN NAME] Cheatsheet
 
 ## 1. Pattern Overview
