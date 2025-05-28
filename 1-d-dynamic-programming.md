@@ -28,7 +28,7 @@ def dp_1d_template(n):
     
     # Step 2: Base cases
     dp[0] = base_case_0
-    if n > 0:
+    if n > 1:
         dp[1] = base_case_1
     
     # Step 3: Fill array using recurrence relation
