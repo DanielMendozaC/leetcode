@@ -29,14 +29,11 @@ def dfs_template(graph, start):
     result = []
     
     def dfs(node):
-        if node in visited:
-            return
-        
-        visited.add(node)
+        visited.add(node)  # Mark as visited immediately
         result.append(node)  # Process current node
         
         for neighbor in graph[node]:
-            if neighbor not in visited:
+            if neighbor not in visited:  # Only check here
                 dfs(neighbor)
     
     dfs(start)
