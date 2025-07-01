@@ -1,3 +1,12 @@
+# Pattern to memorize
+# Bottom-up DP template
+dp[0] = base_case
+for i in range(1, target + 1):
+    for choice in choices:
+        if valid(choice, i):
+            dp[i] = optimize(dp[i], dp[i - cost] + 1)
+
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         # Time Complexity: O(amount × len(coins))
