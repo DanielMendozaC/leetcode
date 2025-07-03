@@ -36,21 +36,29 @@ def tree_dfs_template(root):
     # Step 4: Combine results
     return combine(current_result, left_result, right_result)
 
-def tree_bfs_template(root):
+from collections import deque
+
+def tree_bfs_levels(root):
     if not root:
-        return base_case_value
+        return []
     
-    queue = [root]
+    queue = deque([root])
     result = []
     
     while queue:
-        node = queue.pop(0)
-        result.append(process(node.val))
+        level_size = len(queue)  # Key insight!
+        level = []
         
-        if node.left:
-            queue.append(node.left)
-        if node.right:
-            queue.append(node.right)
+        for _ in range(level_size):
+            node = queue.popleft()
+            level.append(node.val)
+            
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+        
+        result.append(level)
     
     return result
 ```
